@@ -129,7 +129,6 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 2rem;
 }
 
 .item {
@@ -225,7 +224,7 @@ h5 {
    }
 
     h5 {
-        font-size: 1rem; /* Ajuste o tamanho da fonte conforme necessário */
+        font-size: .7rem; /* Ajuste o tamanho da fonte conforme necessário */
     }
 
     .social-icons {
@@ -236,6 +235,12 @@ h5 {
 }
 
 @media (max-width: 800px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .3rem;
+        /* margin-top: 2rem; */
+    }
     .logo img { 
         height: 30px; /* Ajuste a altura para tamanhos menores */
     }
@@ -255,6 +260,7 @@ h5 {
 
     h2 {
         font-size: 0.8rem; /* Ajuste o tamanho da fonte para dispositivos menores */
+        margin-top: 2rem;
     }
     nav ul li a {
         color: #ffffff; /* Cor do texto dos links */
@@ -271,19 +277,19 @@ h5 {
 
     .item img {
         width: 100%;
-        height: 100px;
+        height: 130px;
         object-fit: cover;
         border-radius: 5px;
         margin-bottom: 1rem;
     }
 
     .item h3 {
-        font-size: .5rem;
+        font-size: .8rem;
         margin-bottom: 0.5rem;
     }
 
     h4 {
-        font-size: .2rem;
+        font-size: .5rem;
     }
 
     .container {
@@ -295,9 +301,41 @@ h5 {
         color: white;
         align-items: center;
     }
-    .expand-btn, .close-btn {
+    .expand-btn{
         padding: 6px 8px;
         font-size: 5px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .3rem;
+        /* margin-top: 2rem; */
+    }
+
+    .about, .patrimonio, .contact {
+        padding: .5rem 0;
+        text-align: center;
+        color: white;
+    }
+
+    .item.expanded {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        background: white;
+        padding: 20px;
+        color: #000000;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        width: 60%;
+        font-size: .5rem;
+    }
+    .close-btn {
+        padding: 6px 8px;
+        font-size: .5rem;
     }
 }
 
